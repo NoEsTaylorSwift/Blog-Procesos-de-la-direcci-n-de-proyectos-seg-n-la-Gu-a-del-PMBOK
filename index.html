@@ -5,228 +5,370 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog PMBOK | Procesos de Dirección de Proyectos según PMI</title>
     <style>
-        /* Estilos APA 7 (visual en pantalla) */
-        * { box-sizing: border-box }
+        /* ===== NORMAS APA 7ª EDICIÓN MEJORADAS ===== */
+        /* Diseño profesional con sutiles mejoras visuales */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Márgenes de 1 pulgada para simular formato de papel */
         body {
             font-family: 'Times New Roman', Times, serif;
+            background: #f5f9fc; /* Fondo suave tipo papel */
+            color: #1e2a3a;
             font-size: 12pt;
-            line-height: 2; /* doble espacio */
-            color: #000;
-            background: #f5f5f5;
-            padding: 1in; /* 1 pulgada */
+            line-height: 2;
+            padding: 1in;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Contenedor centrado que representa el área imprimible */
+        /* Contenedor principal con efecto de papel */
         .blog-container {
-            max-width: 9in; /* carta: 8.5in - 2in margins */
+            max-width: 8.5in;
             margin: 0 auto;
-            background: #fff;
-            padding: 0.5in 0.6in;
+            background: #ffffff;
+            padding: 0.7in 0.8in;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px -12px rgba(0, 30, 50, 0.15);
+            border: 1px solid rgba(0, 51, 102, 0.08);
         }
 
+        /* Tipografía refinada para títulos */
         h1 {
-            font-size: 28px;
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 10px;
-            color: #000000;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 15px;
+            font-size: 22pt;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 16px 0;
+            color: #003366;
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 20px;
         }
 
         h2 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 35px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            border-left: 6px solid #3498db;
+            font-size: 16pt;
+            font-weight: 700;
+            margin: 32pt 0 12pt 0;
+            color: #003366;
+            border-left: 5px solid #003366;
             padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-            border-bottom: 1px dashed #bdc3c7;
-            padding-bottom: 8px;
+            font-size: 14pt;
+            font-weight: 600;
+            margin: 24pt 0 10pt 0;
+            color: #1e4a6b;
+            font-style: italic;
         }
 
         h4 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #2980b9;
+            font-size: 13pt;
+            font-weight: 600;
+            margin: 20pt 0 8pt 0;
+            color: #2c3e50;
         }
 
+        /* Párrafos con sangría APA perfecta */
         p {
-            font-size: 18px;
-            text-align: left;
-            margin-bottom: 20px;
-            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            text-align: justify;
+            margin: 0 0 14pt 0;
+            text-indent: 0.5in;
+            line-height: 2;
+            color: #1e2a3a;
+            hyphens: auto;
         }
 
+        /* Excepciones de sangría */
+        h1, h2, h3, h4, h5, h6, 
+        ul, ol, li, 
+        table, 
+        .referencias p, 
+        .datos-curso *,
+        blockquote,
+        .no-indent,
+        .autor p,
+        .subtitulo {
+            text-indent: 0;
+        }
+
+        /* Listas mejoradas con viñetas elegantes */
         ul, ol {
-            margin-left: 40px;
-            margin-bottom: 25px;
-            font-size: 18px;
+            margin: 0 0 16pt 0.6in;
+            padding-left: 0;
+            font-size: 12pt;
+            line-height: 2;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6pt;
+            text-indent: 0;
         }
 
+        ul li {
+            list-style: none;
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 6px;
+            top: 0;
+            color: #003366;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        ol {
+            list-style-type: none;
+            counter-reset: item;
+        }
+        
+        ol li {
+            counter-increment: item;
+            position: relative;
+            padding-left: 28px;
+        }
+        
+        ol li:before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        /* Tablas profesionales */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
-            font-size: 16px;
-            font-family: 'Times New Roman', Times, serif;
-            border: 1px solid #ddd;
+            margin: 24pt 0;
+            font-size: 11.5pt;
+            line-height: 1.5;
+            text-indent: 0;
+            border: 1px solid #d0dbe8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
         }
 
-        th {
-            background-color: #2c3e50;
-            color: white;
-            font-weight: bold;
-            padding: 12px 8px;
-            text-align: center;
-            border: 1px solid #34495e;
+        thead th {
+            background: #e9f0f7;
+            color: #003366;
+            font-weight: 700;
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 2px solid #003366;
+            font-size: 12pt;
         }
 
-        td {
-            padding: 10px 8px;
-            border: 1px solid #ddd;
+        tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #dbe1e8;
             vertical-align: top;
+            background: white;
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        tbody tr:last-child td {
+            border-bottom: none;
         }
 
-        .highlight {
-            background-color: #e8f4fd;
-            padding: 4px 6px;
-            border-radius: 3px;
-            font-weight: 500;
+        tbody tr:hover td {
+            background: #f8fafd;
         }
 
+        /* Citas estilo APA mejoradas */
         blockquote {
             font-style: italic;
-            margin: 20px 40px;
-            padding: 15px 25px;
-            background-color: #f0f7fb;
-            border-left: 6px solid #3498db;
-            font-size: 17px;
+            margin: 20pt 0.6in;
+            padding: 14px 22px;
+            border-left: 5px solid #003366;
+            background: #f0f7fc;
+            color: #1e3a5f;
             border-radius: 0 8px 8px 0;
+            font-size: 11.5pt;
+            line-height: 1.8;
         }
 
-        .datos-curso {
-            background-color: #ecf0f1;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 40px 0 20px;
-            border: 1px solid #bdc3c7;
-        }
-
-        .datos-curso table {
-            margin: 15px 0 0;
-            border: none;
-            background-color: white;
-        }
-
-        .datos-curso td:first-child {
-            font-weight: bold;
-            width: 200px;
-            background-color: #e9ecef;
-        }
-
+        /* Referencias con sangría francesa perfecta */
         .referencias {
-            margin-top: 45px;
-            padding-top: 20px;
-            border-top: 2px solid #2c3e50;
+            margin: 30pt 0 20pt 0;
+            text-indent: 0;
+        }
+        
+        .referencias h2 {
+            margin-bottom: 18pt;
+        }
+        
+        .referencias p {
+            margin: 0 0 10pt 0.5in;
+            text-indent: -0.5in;
+            font-size: 11.5pt;
+            line-height: 1.8;
+            text-align: left;
+            padding-left: 0;
         }
 
-        .referencias p {
-            margin-left: 40px;
-            text-indent: -40px;
-            font-size: 16px;
-            margin-bottom: 12px;
+        /* Datos del curso - diseño limpio */
+        .datos-curso {
+            margin: 30pt 0 20pt 0;
+            background: #f4f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #cbd6e4;
+        }
+        
+        .datos-curso table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 6px;
+            margin: 0;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .datos-curso td {
+            padding: 10px 16px;
+            vertical-align: middle;
+            background: white;
+            border: 1px solid #dde3ec;
+        }
+        
+        .datos-curso td:first-child {
+            font-weight: 700;
+            width: 30%;
+            background: #e4ecf5;
+            color: #003366;
+            border-right: 2px solid #003366;
+        }
+
+        /* Notas y destacados */
+        .nota {
+            margin: 20pt 0;
+            padding: 16px 22px;
+            border-left: 5px solid #c49b3f;
+            background: #fef9e7;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .nota p {
+            margin: 0 0 8px 0;
+            text-indent: 0;
+        }
+
+        /* Portada estilo APA académica */
+        .portada {
+            text-align: center;
+            margin: 0 0 50px 0;
+            padding: 40px 0;
+            border-bottom: 2px solid #003366;
+        }
+
+        .portada h1 {
+            font-size: 26pt;
+            margin-top: 30px;
+            border-bottom: none;
+            padding-bottom: 10px;
+        }
+
+        .autor {
+            margin: 40px 0 20px;
+            font-size: 12pt;
+        }
+
+        .autor p {
+            text-indent: 0;
+            margin: 4px 0;
+            text-align: center;
         }
 
         .subtitulo {
-            font-size: 22px;
+            text-align: center;
+            font-size: 14pt;
             font-style: italic;
-            color: #34495e;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ecf0f1;
-            padding-bottom: 15px;
+            margin: 0 0 40px 0;
+            color: #2c5778;
+            font-weight: 400;
         }
 
-        .nota {
-            background-color: #fef9e7;
-            border-left: 6px solid #f39c12;
-            padding: 18px 25px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-            font-size: 18px;
+        /* Línea divisoria elegante */
+        hr {
+            margin: 30pt 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #003366, transparent);
         }
 
-        .procesos-tabla {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .procesos-tabla td {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-        }
-
-        .procesos-tabla tr td:first-child {
-            font-weight: bold;
-            background-color: #f8f9fa;
-            width: 40%;
-        }
-
-        @media (max-width: 700px) {
+        /* Media query para impresión */
+        @media print {
+            body {
+                background: white;
+                padding: 0.5in;
+            }
             .blog-container {
-                padding: 25px 20px;
+                box-shadow: none;
+                border: none;
+                padding: 0;
             }
-            table {
-                font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 0.3in;
             }
+            
+            .blog-container {
+                padding: 0.4in;
+            }
+            
             ul, ol {
-                margin-left: 25px;
+                margin-left: 0.4in;
+            }
+            
+            .referencias p {
+                margin-left: 0.4in;
+                text-indent: -0.4in;
+            }
+            
+            .datos-curso td:first-child {
+                width: 120px;
             }
         }
     </style>
 </head>
 <body>
     <div class="blog-container">
-        <!-- TÍTULO PRINCIPAL -->
-        <h1>Procesos de la Dirección de Proyectos: Guía Completa de la Metodología PMI y la Guía del PMBOK</h1>
-        <div class="subtitulo">Aprende los 5 grupos de procesos, las 10 áreas de conocimiento y cómo aplicar la metodología del Project Management Institute en tus proyectos</div>
+        <!-- PORTADA ESTILO APA MEJORADA -->
+       
+
+        <!-- TÍTULO DEL ARTÍCULO -->
+        <h1>Procesos de la Dirección de Proyectos</h1>
+        <div class="subtitulo">Guía completa de la metodología PMI y la Guía del PMBOK: 5 grupos de procesos, 10 áreas de conocimiento y aplicación práctica</div>
 
         <!-- 1. INTRODUCCIÓN -->
         <h2>1. Introducción</h2>
-        <p>En el dinámico mundo empresarial actual, la capacidad de ejecutar proyectos de manera exitosa se ha convertido en un factor crítico para la supervivencia y el crecimiento de las organizaciones. Factores como la globalización, la transformación digital y la creciente competencia obligan a las empresas a adaptarse rápidamente, innovar constantemente y optimizar el uso de sus recursos. En este contexto, la gestión de proyectos no solo implica cumplir con plazos y presupuestos, sino también garantizar la calidad, minimizar riesgos y generar valor sostenible para los stakeholders.
-
-Es aquí donde cobra relevancia la metodología de proyectos del Project Management Institute (PMI), una organización reconocida a nivel mundial por establecer estándares y buenas prácticas en la dirección de proyectos. A través de su guía más conocida, el PMBOK (Project Management Body of Knowledge), el PMI proporciona un marco estructurado que permite planificar, ejecutar, monitorear y cerrar proyectos de manera eficiente. Esta metodología se basa en áreas clave como la gestión del alcance, tiempo, costos, calidad, recursos, comunicaciones, riesgos y adquisiciones, facilitando una visión integral del proyecto. </p>
-       
+        <p>En el dinámico mundo empresarial actual, la capacidad de ejecutar proyectos de manera exitosa se ha convertido en un factor crítico para la supervivencia y el crecimiento de las organizaciones. Factores como la globalización, la transformación digital y la creciente competencia obligan a las empresas a adaptarse rápidamente, innovar constantemente y optimizar el uso de sus recursos. En este contexto, la gestión de proyectos no solo implica cumplir con plazos y presupuestos, sino también garantizar la calidad, minimizar riesgos y generar valor sostenible para los stakeholders.</p>
+        
+        <p>Es aquí donde cobra relevancia la metodología de proyectos del Project Management Institute (PMI), una organización reconocida a nivel mundial por establecer estándares y buenas prácticas en la dirección de proyectos. A través de su guía más conocida, el PMBOK (Project Management Body of Knowledge), el PMI proporciona un marco estructurado que permite planificar, ejecutar, monitorear y cerrar proyectos de manera eficiente. Esta metodología se basa en áreas clave como la gestión del alcance, tiempo, costos, calidad, recursos, comunicaciones, riesgos y adquisiciones, facilitando una visión integral del proyecto.</p>
 
         <h3>¿Qué es la metodología de proyectos PMI?</h3>
         <p>La metodología de proyectos PMI es un sistema de gestión o dirección de proyectos desarrollado por el Instituto de Dirección de Proyectos (PMI - Project Management Institute). El PMI es una organización estadounidense sin ánimo de lucro cuyo objetivo principal es estudiar y promover la dirección y la gestión de proyectos.</p>
-        <p>El PMI creó una guía de buenas prácticas llamada <strong>Cuerpo de Conocimiento de Gestión de Proyectos (PMBOK - Project Management Body of Knowledge)</strong>. En esta guía se exponen las directrices para la gestión y dirección de proyectos y se recogen una serie de procedimientos de gestión de proyectos que han demostrado su eficacia y que se conocen como metodología de proyectos PMI o metodología del PMI. El PMBOK describe las mejores prácticas y procesos para la gestión de proyectos en todas las etapas de su ciclo de vida.</p>
+        
+        <p>El PMI creó una guía de buenas prácticas llamada Cuerpo de Conocimiento de Gestión de Proyectos (PMBOK - Project Management Body of Knowledge). En esta guía se exponen las directrices para la gestión y dirección de proyectos y se recogen una serie de procedimientos de gestión de proyectos que han demostrado su eficacia y que se conocen como metodología de proyectos PMI o metodología del PMI. El PMBOK describe las mejores prácticas y procesos para la gestión de proyectos en todas las etapas de su ciclo de vida.</p>
 
         <h3>Beneficios de aplicar la metodología PMI</h3>
         <p>Aplicar la gestión de procesos PMI es importante para las empresas porque estandariza la gestión de proyectos. Al seguir una metodología estructurada, los gerentes de proyecto pueden identificar y abordar los problemas de manera oportuna. Esta metodología también ayuda a mejorar la eficiencia y efectividad de los proyectos, asegurando que se entreguen a tiempo, dentro del presupuesto y con la calidad satisfactoria para todas las partes interesadas.</p>
-        <p><strong>Mediante la gestión o dirección de proyectos se consigue:</strong></p>
+        
+        <p>Mediante la gestión o dirección de proyectos se consigue:</p>
         <ul>
             <li>Cumplir los objetivos del proyecto y del negocio de las organizaciones que patrocinan los proyectos.</li>
             <li>Satisfacer las necesidades y expectativas de las partes interesadas de los proyectos.</li>
@@ -240,243 +382,194 @@ Es aquí donde cobra relevancia la metodología de proyectos del Project Managem
         <h2>2. Desarrollo: Fundamentos de la Dirección de Proyectos</h2>
 
         <h3>2.1 Procesos Clave de la Metodología del PMI</h3>
-        <p>Según el material del módulo, <strong>los procesos son una serie de tareas o actividades de gestión o dirección de proyectos que a partir de una o más entradas producen una o más salidas mediante la aplicación de ciertas herramientas y técnicas</strong>.</p>
-        <p>Estos procesos se agrupan en una serie de <strong>áreas de conocimiento</strong> y <strong>grupos de procesos</strong>. Las áreas de conocimiento son áreas identificadas por sus requisitos de conocimiento y que se describen en función de los procesos que contienen. A su vez, los grupos de procesos son agrupaciones lógicas de procesos para conseguir los objetivos del proyecto.</p>
+        <p>Según el material del módulo, los procesos son una serie de tareas o actividades de gestión o dirección de proyectos que a partir de una o más entradas producen una o más salidas mediante la aplicación de ciertas herramientas y técnicas.</p>
+        
+        <p>Estos procesos se agrupan en una serie de áreas de conocimiento y grupos de procesos. Las áreas de conocimiento son áreas identificadas por sus requisitos de conocimiento y que se describen en función de los procesos que contienen. A su vez, los grupos de procesos son agrupaciones lógicas de procesos para conseguir los objetivos del proyecto.</p>
 
         <h3>2.2 Las Áreas de Conocimiento</h3>
-        <p>El PMBOK identifica <strong>10 áreas de conocimiento</strong> que deben gestionarse a lo largo de todo el proyecto:</p>
+        <p>El PMBOK identifica 10 áreas de conocimiento que deben gestionarse a lo largo de todo el proyecto:</p>
         <ol>
-            <li><strong>Integración:</strong> son los procesos necesarios para determinar, desarrollar, combinar y orquestar los procesos de dirección de proyectos.</li>
-            <li><strong>Alcance:</strong> imprescindibles para garantizar que se realiza el trabajo necesario para la ejecución exitosa de los proyectos, y únicamente el trabajo necesario.</li>
-            <li><strong>Cronograma:</strong> procedimientos para conseguir finalizar los proyectos a tiempo.</li>
-            <li><strong>Costes:</strong> para estimar, calcular y controlar los gastos necesarios para la ejecución del proyecto y cumplir el presupuesto.</li>
-            <li><strong>Calidad:</strong> procesos necesarios para asegurar el cumplimiento de los requisitos de calidad del proyecto para satisfacer las necesidades y expectativas de las partes interesadas.</li>
-            <li><strong>Recursos:</strong> para determinar, asignar y gestionar los recursos necesarios para la ejecución de los proyectos.</li>
-            <li><strong>Comunicaciones:</strong> su objetivo es garantizar que la información de los proyectos y servicios sea recopilada, distribuida, etc. de manera adecuada.</li>
-            <li><strong>Riesgos:</strong> para gestionar los riesgos que afectan a la consecución de los objetivos de los proyectos.</li>
-            <li><strong>Adquisiciones:</strong> para comprar las herramientas, servicios, etc. necesarios para la ejecución del proyecto.</li>
-            <li><strong>Interesados:</strong> su fin es gestionar las personas u organizaciones que pueden influir o verse afectadas por los proyectos y satisfacer sus necesidades y expectativas con la ejecución del proyecto.</li>
+            <li><strong>Integración:</strong> procesos para determinar, desarrollar, combinar y orquestar los procesos de dirección de proyectos.</li>
+            <li><strong>Alcance:</strong> garantizar que se realiza el trabajo necesario y únicamente el necesario.</li>
+            <li><strong>Cronograma:</strong> procedimientos para finalizar los proyectos a tiempo.</li>
+            <li><strong>Costes:</strong> estimar, calcular y controlar los gastos para cumplir el presupuesto.</li>
+            <li><strong>Calidad:</strong> asegurar el cumplimiento de los requisitos de calidad.</li>
+            <li><strong>Recursos:</strong> determinar, asignar y gestionar los recursos necesarios.</li>
+            <li><strong>Comunicaciones:</strong> garantizar que la información sea recopilada y distribuida adecuadamente.</li>
+            <li><strong>Riesgos:</strong> gestionar los riesgos que afectan los objetivos del proyecto.</li>
+            <li><strong>Adquisiciones:</strong> comprar herramientas, servicios necesarios para el proyecto.</li>
+            <li><strong>Interesados:</strong> gestionar personas u organizaciones que influyen o son afectadas.</li>
         </ol>
 
         <h3>2.3 Los Grupos de Procesos</h3>
-        <p>El método PMI se divide en <strong>cinco grupos de procesos interconectados y secuenciales</strong> que abarcan el ciclo de vida completo del proyecto. Cada grupo tiene su propio conjunto de objetivos y resultados, y los procesos están diseñados para trabajar juntos en el logro de estos objetivos.</p>
+        <p>El método PMI se divide en cinco grupos de procesos interconectados y secuenciales que abarcan el ciclo de vida completo del proyecto. Cada grupo tiene su propio conjunto de objetivos y resultados, y los procesos están diseñados para trabajar juntos en el logro de estos objetivos.</p>
 
         <!-- 3. LOS 5 GRUPOS DE PROCESOS -->
         <h2>3. Los 5 Grupos de Procesos de la Dirección de Proyectos</h2>
 
         <!-- 3.1 INICIO -->
-        <h3>3.1 PROCESOS DE INICIO</h3>
+        <h3>3.1 Procesos de Inicio</h3>
         <p><strong>Definición:</strong> En este momento es cuando se origina un proyecto. Es el periodo en el que se define en qué consistirá y se comunica de manera clara a la empresa y las partes interesadas.</p>
-        <p><strong>Documentos clave para la aprobación:</strong> La aprobación se otorga después de considerar la viabilidad y valor del plan, lo cual comúnmente se realiza mediante la revisión de dos documentos:</p>
+        
+        <p><strong>Documentos clave para la aprobación:</strong> La aprobación se otorga después de considerar la viabilidad y valor del plan mediante la revisión de dos documentos:</p>
         <ul>
             <li><strong>Documento de caso de negocio:</strong> describe los posibles beneficios de valor y financieros.</li>
-            <li><strong>Estudio de factibilidad:</strong> aborda las metas del proyecto, los costos y el cronograma, para determinar si el plan es viable.</li>
+            <li><strong>Estudio de factibilidad:</strong> aborda las metas del proyecto, costos y cronograma.</li>
         </ul>
-        <p><strong>Fase de Inicio (aplicación práctica):</strong> La fase de inicio es el punto de partida de un proyecto, donde se define el objetivo, se identifican las necesidades del cliente y se establece un plan preliminar. También se identifican los stakeholders y se define el alcance del proyecto. Es el momento de definir la visión general del proyecto y cómo se alinea con las metas estratégicas de la organización.</p>
-        <p>Durante esta fase, es crucial establecer una visión clara del proyecto y asegurarse de que todas las partes interesadas estén alineadas en cuanto a sus objetivos y expectativas. También es importante establecer un equipo de trabajo y asignar roles y responsabilidades.</p>
+
+        <p><strong>Fase de Inicio (aplicación práctica):</strong> La fase de inicio es el punto de partida, donde se define el objetivo, se identifican las necesidades del cliente y se establece un plan preliminar. También se identifican los stakeholders y se define el alcance del proyecto.</p>
+        
+        <p>Durante esta fase, es crucial establecer una visión clara del proyecto y asegurarse de que todas las partes interesadas estén alineadas en cuanto a objetivos y expectativas.</p>
+
         <p><strong>Entregables claves:</strong></p>
         <ul>
-            <li>Elaborar el acta de constitución del proyecto (Project Charter)</li>
+            <li>Acta de constitución del proyecto (Project Charter)</li>
             <li>Estudio de viabilidad</li>
-            <li>Registro e identificación de los interesados</li>
+            <li>Registro de interesados</li>
         </ul>
-        <p><strong>Resultado de la fase:</strong> La aprobación del proyecto por parte de los stakeholders y la creación de un documento de inicio de proyecto (Project Charter) que contenga los objetivos, el alcance, los entregables y el presupuesto preliminar del proyecto.</p>
 
         <!-- 3.2 PLANIFICACIÓN -->
-        <h3>3.2 PROCESOS DE PLANIFICACIÓN</h3>
-        <p><strong>Definición:</strong> El propósito del plan del proyecto es proporcionar una guía para que los equipos puedan alcanzar los resultados deseados. En este documento se detalla cómo obtener los recursos necesarios, incluyendo los recursos humanos, materiales y financieros. Además, se presentan medidas para prevenir posibles problemas y se establecen acciones para asegurar que el proyecto se complete dentro del presupuesto y en el tiempo acordado.</p>
-        <p><strong>Fase de Planificación (aplicación práctica):</strong> Una vez que el proyecto se ha aprobado y se ha establecido una base sólida en la fase de inicio, es hora de planificar los detalles del proyecto. Durante esta fase, se desarrolla un plan detallado para guiar la ejecución del proyecto. Este plan se convierte en una hoja de ruta que detalla cada paso necesario para alcanzar los objetivos del proyecto.</p>
-        <p>El plan de proyecto debe incluir un cronograma, un presupuesto detallado, un plan de gestión de riesgos y un plan de comunicación. También se deben identificar los recursos necesarios y asignarlos a tareas específicas. La definición de hitos y la asignación de plazos realistas y alcanzables son esenciales para mantener el proyecto en curso. La fase de planificación también implica a todas las partes interesadas y se centra en obtener la aprobación del plan antes de avanzar a la siguiente fase.</p>
-
+        <h3>3.2 Procesos de Planificación</h3>
+        <p><strong>Definición:</strong> El propósito del plan del proyecto es proporcionar una guía para que los equipos alcancen los resultados deseados. Se detalla cómo obtener recursos humanos, materiales y financieros, además de medidas para prevenir problemas.</p>
+        
+        <p><strong>Fase de Planificación (aplicación práctica):</strong> Una vez aprobado el proyecto, se desarrolla un plan detallado que se convierte en hoja de ruta. Debe incluir cronograma, presupuesto, plan de gestión de riesgos y plan de comunicación.</p>
+        
         <p><strong>Procesos en esta fase:</strong></p>
-        <table class="procesos-tabla">
-            <tr><td>Desarrollar el plan para la dirección del proyecto</td><td>Planificar cómo se involucrarán los interesados</td></tr>
-            <tr><td>Planificar la gestión del alcance</td><td>Recopilar los requisitos</td></tr>
-            <tr><td>Definir el alcance</td><td>Crear la EDT/WBS</td></tr>
-            <tr><td>Planificar la gestión del cronograma</td><td>Definir las actividades</td></tr>
-            <tr><td>Secuenciar las actividades</td><td>Planificar la gestión de los riesgos</td></tr>
-            <tr><td>Identificar los riesgos</td><td>Realizar el análisis cualitativo de riesgos</td></tr>
-            <tr><td>Realizar el análisis cuantitativo de riesgos</td><td>Planificar la respuesta a los riesgos</td></tr>
-            <tr><td>Planificar la gestión de recursos</td><td>Estimar los recursos de las actividades</td></tr>
-            <tr><td>Planificar la gestión de los costes</td><td>Estimar los costes</td></tr>
-            <tr><td>Estimar la duración de las actividades</td><td>Desarrollar el cronograma</td></tr>
-            <tr><td>Determinar el presupuesto</td><td>Planificar la gestión de la calidad</td></tr>
-            <tr><td>Planificar la gestión de las comunicaciones</td><td>Planificar la gestión de las adquisiciones</td></tr>
-        </table>
-
-        <p><strong>Entregables claves:</strong></p>
         <ul>
-            <li>Plan de gestión del proyecto</li>
-            <li>Cronograma</li>
-            <li>Presupuesto</li>
-            <li>Plan de comunicación</li>
-            <li>Plan de gestión de riesgos</li>
+            <li>Desarrollar el plan para la dirección del proyecto</li>
+            <li>Planificar gestión de interesados, alcance, cronograma, costes, calidad, recursos, comunicaciones, riesgos, adquisiciones</li>
+            <li>Recopilar requisitos, definir alcance, crear EDT/WBS</li>
+            <li>Definir actividades, secuenciar, estimar recursos y duración, desarrollar cronograma</li>
+            <li>Estimar costes, determinar presupuesto</li>
+            <li>Identificar riesgos, análisis cualitativo y cuantitativo, planificar respuesta</li>
         </ul>
 
         <!-- 3.3 EJECUCIÓN -->
-        <h3>3.3 PROCESOS DE EJECUCIÓN</h3>
-        <p><strong>Definición:</strong> La implementación del proyecto implica una reunión de los involucrados para definir sus responsabilidades, objetivos y cómo su trabajo afecta a los demás. De esta forma, todos comprenden la importancia de su trabajo y saben a quién acudir en caso de problemas que obstaculicen el progreso del proyecto.</p>
-        <p>Se recomienda el uso de herramientas que permitan el registro automático de los resultados, utilizando indicadores para evaluar si la gestión de los recursos, el tiempo y el personal es efectiva.</p>
-        <p><strong>Fase de Ejecución (aplicación práctica):</strong> En la fase de ejecución, se lleva a cabo el trabajo planificado en la fase anterior. Es la etapa donde la planificación se convierte en acción y los resultados comienzan a tomar forma. Durante esta fase, el equipo del proyecto trabaja en estrecha colaboración para completar las tareas y entregar los entregables del proyecto.</p>
-        <p>El project manager juega un papel clave en esta fase, asegurándose de que el equipo esté en camino y resolviendo cualquier problema que surja. También es importante mantener una comunicación clara y constante con todas las partes interesadas para garantizar que el proyecto esté avanzando según lo planeado. La ejecución eficaz requiere una gestión flexible y adaptativa para enfrentar los desafíos que surgen.</p>
-
+        <h3>3.3 Procesos de Ejecución</h3>
+        <p><strong>Definición:</strong> La implementación del proyecto implica reunir a los involucrados para definir responsabilidades y objetivos. Todos comprenden la importancia de su trabajo y saben a quién acudir ante problemas.</p>
+        
+        <p><strong>Fase de Ejecución (aplicación práctica):</strong> Se lleva a cabo el trabajo planificado. El equipo trabaja en estrecha colaboración para completar tareas y entregar los entregables.</p>
+        
         <p><strong>Procesos en esta fase:</strong></p>
         <ul>
             <li>Dirigir y gestionar el trabajo del proyecto</li>
             <li>Gestionar el conocimiento del proyecto</li>
-            <li>Gestionar cómo se involucrarán los interesados</li>
-            <li>Adquirir recursos</li>
-            <li>Formar el equipo</li>
-            <li>Dirigir el equipo</li>
-            <li>Gestionar las comunicaciones</li>
-            <li>Efectuar las adquisiciones</li>
-            <li>Gestionar la calidad</li>
-            <li>Implementar la respuesta a los riesgos</li>
-        </ul>
-
-        <p><strong>Entregables claves:</strong></p>
-        <ul>
-            <li>Productos o servicios del proyecto</li>
-            <li>Informes de estado</li>
-            <li>Actualizaciones del plan</li>
+            <li>Gestionar involucramiento de interesados</li>
+            <li>Adquirir recursos, formar y dirigir el equipo</li>
+            <li>Gestionar comunicaciones y adquisiciones</li>
+            <li>Gestionar calidad e implementar respuesta a riesgos</li>
         </ul>
 
         <!-- 3.4 MONITOREO Y CONTROL -->
-        <h3>3.4 PROCESOS DE MONITOREO Y CONTROL</h3>
-        <p><strong>Definición:</strong> Generalmente este paso suele coincidir con el anterior (ejecución), y es una excelente oportunidad para tomar medidas en caso de que surja algún problema. También se puede aprovechar para identificar posibles mejoras o para optimizar los procesos, utilizando una estrategia aprendida recientemente o integrando talento con conocimiento específico.</p>
-        <p>El monitoreo y control permiten anticiparse a malas noticias y también aprovechar oportunidades que puedan surgir durante la implementación del proyecto.</p>
-        <p><strong>Fase de Monitoreo y Control (aplicación práctica):</strong> Durante la fase de monitoreo y control, el project manager supervisa y controla el progreso del proyecto para asegurarse de que se esté avanzando según lo planeado. Esta fase también implica la identificación y resolución de problemas y riesgos en tiempo real. Es una etapa continua que se solapa con la ejecución y requiere una revisión constante de las métricas del proyecto.</p>
-        <p>El project manager debe comparar el progreso real con el plan de proyecto y realizar ajustes si es necesario. También se deben realizar informes periódicos a las partes interesadas para mantenerlos informados sobre el progreso del proyecto. La transparencia en el seguimiento y la rendición de cuentas son vitales para mantener la confianza de los stakeholders.</p>
-
+        <h3>3.4 Procesos de Monitoreo y Control</h3>
+        <p><strong>Definición:</strong> Generalmente coincide con la ejecución, permitiendo tomar medidas ante problemas, identificar mejoras y optimizar procesos.</p>
+        
+        <p><strong>Fase de Monitoreo y Control (aplicación práctica):</strong> El project manager supervisa el progreso, compara el avance real con el plan y realiza ajustes. Se generan informes periódicos para stakeholders.</p>
+        
         <p><strong>Procesos en esta fase:</strong></p>
         <ul>
             <li>Monitorear y controlar el trabajo del proyecto</li>
-            <li>Realizar el control integrado de cambios</li>
-            <li>Monitorear cómo se involucran los interesados</li>
-            <li>Controlar el cronograma</li>
-            <li>Controlar los costes</li>
-            <li>Monitorear las comunicaciones</li>
-            <li>Monitorear los riesgos</li>
-            <li>Controlar los recursos</li>
-            <li>Controlar la calidad</li>
-            <li>Validar el alcance</li>
-            <li>Controlar el alcance</li>
-            <li>Controlar las adquisiciones</li>
-        </ul>
-
-        <p><strong>Entregables claves:</strong></p>
-        <ul>
-            <li>Informes de rendimiento</li>
-            <li>Análisis de desviaciones</li>
-            <li>Actualizaciones del plan</li>
+            <li>Realizar control integrado de cambios</li>
+            <li>Controlar cronograma, costes, recursos, calidad, alcance, adquisiciones</li>
+            <li>Monitorear interesados, comunicaciones, riesgos</li>
+            <li>Validar alcance</li>
         </ul>
 
         <!-- 3.5 CIERRE -->
-        <h3>3.5 PROCESOS DE CIERRE</h3>
-        <p><strong>Definición:</strong> El cierre del proyecto se produce cuando se pueden presentar al cliente o a los interesados los resultados, informes o entregables que se definieron desde el principio. Es un momento importante para que los equipos que participaron analicen el desempeño de su trabajo, cómo se enfrentaron a los desafíos y qué se puede aprender para futuros proyectos.</p>
-        <p><strong>Fase de Cierre (aplicación práctica):</strong> La fase final del ciclo de vida del proyecto es el cierre. Durante esta fase, se entrega el producto final al cliente y se realiza una revisión del proyecto para identificar lecciones aprendidas y áreas de mejora. Es momento de evaluar los resultados del proyecto en comparación con los objetivos iniciales. De no ser así, los proyectos pueden volver a pasar por las fases anteriores hasta lograr el resultado deseado.</p>
+        <h3>3.5 Procesos de Cierre</h3>
+        <p><strong>Definición:</strong> Se presentan al cliente los resultados y entregables definidos desde el inicio. Es momento de analizar desempeño, desafíos y lecciones aprendidas.</p>
+        
+        <p><strong>Fase de Cierre (aplicación práctica):</strong> Se entrega el producto final, se evalúan resultados contra objetivos iniciales y se documentan lecciones aprendidas.</p>
 
         <p><strong>Entregables claves:</strong></p>
         <ul>
             <li>Producto o servicio final</li>
             <li>Informe de lecciones aprendidas</li>
-            <li>Documentación de cierre del proyecto</li>
+            <li>Documentación de cierre</li>
         </ul>
 
         <!-- 4. CÓMO APLICAR LA METODOLOGÍA -->
-        <h2>4. Cómo Aplicar la Metodología de Gestión de Proyectos PMI en la Práctica</h2>
-        <p>La metodología de proyectos PMI puede resultar difícil de entender si no se pone en práctica. A continuación, una guía práctica basada en las 5 fases:</p>
+        <h2>4. Cómo Aplicar la Metodología en la Práctica</h2>
+        <p>La metodología PMI se comprende mejor llevándola a la práctica. Guía práctica por fase:</p>
 
-        <h3>Fase de Inicio (Práctica)</h3>
+        <h3>Inicio (Práctica)</h3>
         <ul>
-            <li>Reúne a los patrocinadores y stakeholders clave</li>
-            <li>Define claramente el objetivo del negocio</li>
-            <li>Redacta un acta de constitución (Project Charter) con objetivos, alcance preliminar y presupuesto</li>
-            <li>Identifica quiénes serán afectados por el proyecto (registro de interesados)</li>
-            <li>Realiza un estudio de factibilidad y caso de negocio</li>
+            <li>Reúne patrocinadores y stakeholders clave</li>
+            <li>Define objetivo del negocio</li>
+            <li>Redacta Project Charter con objetivos, alcance preliminar y presupuesto</li>
+            <li>Identifica afectados (registro de interesados)</li>
+            <li>Realiza estudio de factibilidad</li>
         </ul>
 
-        <h3>Fase de Planificación (Práctica)</h3>
+        <h3>Planificación (Práctica)</h3>
         <ul>
-            <li>Involucra a todo el equipo en la creación de la EDT/WBS</li>
-            <li>Utiliza herramientas como diagramas de Gantt para el cronograma</li>
-            <li>Sé realista con las estimaciones de tiempo y costo</li>
-            <li>Identifica al menos 5 riesgos potenciales y sus planes de respuesta</li>
-            <li>Desarrolla el plan de comunicación</li>
+            <li>Involucra al equipo en creación de EDT/WBS</li>
+            <li>Usa diagramas de Gantt para cronograma</li>
+            <li>Sé realista con estimaciones de tiempo y costo</li>
+            <li>Identifica al menos 5 riesgos y sus planes de respuesta</li>
+            <li>Desarrolla plan de comunicación</li>
         </ul>
 
-        <h3>Fase de Ejecución (Práctica)</h3>
+        <h3>Ejecución (Práctica)</h3>
         <ul>
             <li>Realiza reuniones cortas diarias (daily stand-ups)</li>
-            <li>Reconoce los logros del equipo</li>
-            <li>Mantén un tablero visible con el progreso</li>
-            <li>Comunica avances regularmente a los interesados</li>
-            <li>Gestiona la calidad desde el primer día</li>
+            <li>Reconoce logros del equipo</li>
+            <li>Mantén tablero visible con progreso</li>
+            <li>Comunica avances regularmente a interesados</li>
+            <li>Gestiona calidad desde el primer día</li>
         </ul>
 
-        <h3>Fase de Monitoreo y Control (Práctica)</h3>
+        <h3>Monitoreo y Control (Práctica)</h3>
         <ul>
-            <li>Revisa el progreso semanalmente contra el plan</li>
-            <li>Si hay desviaciones, actúa rápidamente</li>
-            <li>Documenta todas las solicitudes de cambio</li>
-            <li>Mantén informados a todos con informes breves</li>
+            <li>Revisa progreso semanal contra el plan</li>
+            <li>Actúa rápido ante desviaciones</li>
+            <li>Documenta solicitudes de cambio</li>
+            <li>Mantén informados con informes breves</li>
             <li>Monitorea riesgos constantemente</li>
         </ul>
 
-        <h3>Fase de Cierre (Práctica)</h3>
+        <h3>Cierre (Práctica)</h3>
         <ul>
-            <li>Asegura la aceptación formal del cliente</li>
-            <li>Celebra con el equipo los logros alcanzados</li>
-            <li>Documenta las lecciones aprendidas (¿qué salió bien? ¿qué se puede mejorar?)</li>
-            <li>Archiva toda la documentación para futuros proyectos</li>
+            <li>Asegura aceptación formal del cliente</li>
+            <li>Celebra logros con el equipo</li>
+            <li>Documenta lecciones aprendidas</li>
+            <li>Archiva documentación para futuros proyectos</li>
         </ul>
 
         <!-- 5. CONCLUSIÓN -->
         <h2>5. Conclusión</h2>
-        <p>La Guía del PMBOK y la metodología PMI proporcionan un mapa de ruta inigualable para navegar la complejidad de los proyectos. Lejos de ser un manual de instrucciones inflexible, es un marco de referencia que, al ser interpretado con criterio profesional, permite a los directores de proyecto y sus equipos orquestar sus esfuerzos de manera armoniosa.</p>
-        <p>Como hemos visto a lo largo de este blog, la metodología del PMI se estructura en torno a <strong>5 grupos de procesos</strong> (Inicio, Planificación, Ejecución, Monitoreo y Control, Cierre) y <strong>10 áreas de conocimiento</strong> (Integración, Alcance, Cronograma, Costos, Calidad, Recursos, Comunicaciones, Riesgos, Adquisiciones e Interesados).</p>
-        <p>Comprender la interacción entre estos elementos es el primer paso para transformar la gestión de proyectos de un arte impulsado por la intuición a una disciplina profesional basada en estándares reconocidos y buenas prácticas. Al final, el objetivo es siempre el mismo: entregar valor de manera predecible, eficiente y exitosa, satisfaciendo las necesidades de todas las partes interesadas.</p>
+        <p>La Guía del PMBOK y la metodología PMI proporcionan un mapa de ruta inigualable para navegar la complejidad de los proyectos. Es un marco de referencia que, interpretado con criterio profesional, permite orquestar esfuerzos de manera armoniosa.</p>
+        
+        <p>La metodología se estructura en 5 grupos de procesos (Inicio, Planificación, Ejecución, Monitoreo y Control, Cierre) y 10 áreas de conocimiento. Comprender su interacción es el primer paso para transformar la gestión de proyectos en una disciplina profesional basada en estándares reconocidos.</p>
 
         <!-- 6. REFERENCIAS BIBLIOGRÁFICAS -->
         <div class="referencias">
-            <h2>6. Referencias Bibliográficas (Normas APA 7ª ed.)</h2>
-            <p>[Nombre del profesor o institución]. (2024). <em>El Plan del Proyecto Según PMI</em> [Material del módulo]. [Nombre de tu universidad o curso].</p>
+            <h2>6. Referencias Bibliográficas</h2>
             <p>Project Management Institute. (2017). <em>Guía de los Fundamentos para la Dirección de Proyectos (Guía del PMBOK)</em> (6ª ed.). Project Management Institute.</p>
             <p>ProjectManager. (s.f.). <em>Guía de los Fundamentos para la Dirección de Proyectos (PMBOK)</em>. Recuperado el 18 de marzo de 2026, de https://www.projectmanager.com/es/guia-de-los-fundamentos-para-la-direccion-de-proyectos-pmbok</p>
-            <p>TodoPMP. (s.f.). <em>Procesos PMBOK 8 Explicados: Guía Interactiva</em>. Recuperado el 18 de marzo de 2026, de https://todopmp.com/procesos-pmbok/</p>
             <p>Sánchez, C. (2020). <em>Citar un Blog – Referencias Bibliográficas</em>. Normas APA (7ma edición). Recuperado el 18 de marzo de 2026, de https://normas-apa.org/referencias/citar-un-blog/</p>
+            <p>TodoPMP. (s.f.). <em>Procesos PMBOK 8 Explicados: Guía Interactiva</em>. Recuperado el 18 de marzo de 2026, de https://todopmp.com/procesos-pmbok/</p>
         </div>
 
         <!-- 7. DATOS GENERALES DEL CURSO -->
         <div class="datos-curso">
             <h2>7. Datos Generales del Curso</h2>
             <table>
-                <tr><td>Universidad</td><td>[Nombre de tu universidad]</td></tr>
-                <tr><td>Facultad</td><td>[Nombre de tu facultad]</td></tr>
-                <tr><td>Escuela / Programa</td><td>[Nombre de tu programa]</td></tr>
-                <tr><td>Curso</td><td>[Nombre de la asignatura]</td></tr>
-                <tr><td>Tema</td><td>Procesos de la dirección de proyectos según la Guía del PMBOK</td></tr>
-                <tr><td>Estudiante</td><td>[Tus Nombres y Apellidos]</td></tr>
-                <tr><td>Profesor</td><td>[Nombre del profesor]</td></tr>
+                <tr><td>Universidad</td><td>Mariano Gálvez de Guatemala</td></tr>
+                <tr><td>Facultad</td><td>Ingeniería en Sistemas</td></tr>
+                <tr><td>Curso</td><td>Ingeniería de Software</td></tr>
+                <tr><td>Tema</td><td>Procesos de dirección de proyectos según PMBOK</td></tr>
+                <tr><td>Estudiante</td><td>Mariela Esperanza Félix Tomás</td></tr>
+                <tr><td>Carné</td><td>0903-22-14248</td></tr>
+                <tr><td>Profesor</td><td>Carlos Augusto Godínez Guzmán</td></tr>
                 <tr><td>Fecha</td><td>18 de marzo de 2026</td></tr>
-                <tr><td>Lugar</td><td>[Ciudad, País]</td></tr>
             </table>
         </div>
 
-        <!-- INSTRUCCIONES FINALES Y RECORDATORIO -->
-        <div class="nota">
-            <p><strong>📋 INSTRUCCIONES PARA SUBIR TU BLOG:</strong></p>
-            <ol>
-                <li><strong>Elige una plataforma:</strong> Blogger, Medium o WordPress.</li>
-                <li><strong>Crea una nueva entrada:</strong> Pon el título principal.</li>
-                <li><strong>Copia y pega</strong> todo el contenido de este documento.</li>
-                <li><strong>Revisa el formato:</strong> Asegura que los títulos, negritas y tablas se vean bien.</li>
-                <li><strong>Completa los datos del curso</strong> con tu información personal (reemplaza los textos entre corchetes).</li>
-                <li><strong>Publica</strong> y copia la URL.</li>
-                <li><strong>Entrega:</strong> Pega la URL en el espacio destinado para la tarea.</li>
-            </ol>
-            <p style="font-size: 20px; font-weight: bold; text-align: center; margin-top: 15px;">⚠️ ¡NO OLVIDES PEGAR TU LINK ANTES DE PRESIONAR EL BOTÓN DE PRESENTAR TAREA!</p>
-        </div>
+        <!-- Línea decorativa -->
+        <hr>
+
+        
     </div>
 </body>
 </html>
